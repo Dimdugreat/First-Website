@@ -1,3 +1,3 @@
 # Premier site internet en HTML & CSS vanilla
-HTML &amp; CSS
+HTML & CSS
 Version visitable : https://dimdugreat.github.io/First-Website
