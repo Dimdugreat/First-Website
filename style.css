@@ -1,36 +1,40 @@
+
+/*
+  <color name="Night" hex="#141414" r="20" g="20" b="20" />
+  <color name="Anti-flash white" hex="#eef0f2" r="238" g="240" b="242" />
+*/
 *{
-     font-family: Arial, Helvetica, sans-serif;
+    font-family:"Poppins", 'Times New Roman', Times, serif;
+}
+main{
+     color:#141414;
 }
 header{
-    background-color: black;
-    height: 10vh;
+    background-color:#141414;
 }
 nav{
-    color: rgb(255, 255, 255);
+    color:#eef0f2;
     /* border: .2vh solid rgb(2, 2, 2); */
-    padding: 1vh;
-    display: flex;
-    gap: 12vh;
-    margin-bottom: 3.6vh;
+    display:flex;
 }
 nav img{
     width: 5vh;
     height: 5vh;
 }
 nav ul{
-    list-style: none;
-    display: flex;
+    list-style:none;
+    display:flex;
     gap: 10vh;
-    text-decoration: none;
-    font-weight: bold;
+    text-decoration:none;
+    font-weight:bold;
 }
 nav a{
-    color: aliceblue;
-    text-decoration: none;
+    color:#eef0f2;
+    text-decoration:none;
 }
 
 nav a:hover{
-    color: coral;
+    color:coral;
 }
 /*nav button{
     border-radius: 40px;
@@ -39,32 +43,31 @@ nav a:hover{
     background-color: aliceblue;
     font-weight: bold;
 }*/
-h1 {
-    color:rgb(0, 0, 0);
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.title {
+    display:flex;
+    color: #141414;
+    font-weight:500;
+    justify-content:center;
 }
 img {
     width: 100%;
 }
-p {
-    font-family: Arial, Helvetica, sans-serif;
-}
-#legende-photo {
-    color: rgb(59, 55, 59);
-    font-size: small;
-    font-style: italic;
+.legende {
+    color: rgb(67, 61, 67);
+    font-size:small;
+    font-style:italic;
     margin-bottom: 4vh;
 }
 .seo {
-    color: rgb(14, 14, 108);
-    font-style: italic;
-    font-weight: bold;
+    color: rgb(156, 50, 11);
+    font-style:italic;
+    font-weight:bold;
+}
+.separator{
+    margin-top: 3rem;
+    height: .05rem;
+    width: 100%;
+    background-color: coral;
 }
 
-.neo {
-    color: brown;
-    font-style: italic;
-    font-weight: bold;
-}
 
