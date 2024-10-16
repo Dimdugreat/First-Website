@@ -14,6 +14,8 @@ header {
 }
 section {
     padding :  4.5rem 8%;
+    width: 1920;
+    height: 1080;
 }
 nav {
     display: flex;
@@ -94,6 +96,7 @@ nav ul li a:hover {
         display: flex;
         justify-content: center;
         width: 100%;
+        /* background-color: aqua; */
     }
     .hero-header-home .catch-media {
         position:relative;
@@ -126,4 +129,46 @@ nav ul li a:hover {
     h2 {
         font-size: 16px;
         font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .my-work-section {
+        /* background-color: rgb(247, 1, 1); */
+        width: 100%;
+    }
+    .projects-zone {
+        display: flex;
+        /* background-color: rgb(204, 201, 35); */
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height:fit-content;
+    }
+    .project-card-small {
+        border-radius: 30px;
+        margin: 3px;
+        box-shadow: 2px 1px rgb(0, 0, 0);
+        background-color: white;
+        flex: 1 20%;
+    }
+    .project-card-medium {
+        border-radius: 20px;
+        margin: 3px;
+        box-shadow: 1px 2px rgb(0, 0, 0);
+        background-color: white;
+        flex: 1 30%;
+    }
+    .project-card-large {
+        border-radius: 20px;
+        margin: 3px;
+        box-shadow:  2px 1px rgb(0, 0, 0);
+        background-color: white;
+        flex: 1 50%;
+    }
+    .img-card {
+        flex: 1;
+        width: fit-content;
+        background-size: cover;
+      }
+    .projects-zone p {
+        
     }
