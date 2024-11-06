@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessiner croix avec elements html</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Nobis numquam quae eius, magnam veniam cupiditate vero deserunt!
+         Ratione illum saepe omnis accusantium,consectetur fugiat,
+         dolorem molestias veniam totam modi tempora.</p>
+    <div id="container_croix">
+        <div></div>
+        <div></div>
+    </div>
+
+    <style>
+
+        #container_croix {
+            border: dotted 2px red;
+            position: relative; /* Permet au contenaire de contenir des items en position absolue
+                               ↳ (Par défaut : ses éléments auraient étés positionnés par rapport à la fenetre)*/
+            height: 300px; /* On DOIT définir une hauteur pour que le conteneur puisse acceuillir ses items*/
+        }
+        #container_croix div {
+            width: 300px; height: 50px;
+            background-color: black;
+            border-radius: 30px;
+            position: absolute;
+            left: 50%; top:50%; /* Centre le point le plus à gauche et le plus en haut de la div PARENT 
+                                ↳ Si la div PARENT etait le BODY on aurait exprimé top en vh : 50vh*/
+            transform: translate(-50%, -50%);  /* rajoute - 50 % à l'axe horizontale et -50% à l'axe vertical
+                                                ↳ pour compenser la ligne top left et center la totalité de la div*/
+        }
+        #container_croix div:first-child {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        #container_croix div:nth-child(2) {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    </style>
+</html>

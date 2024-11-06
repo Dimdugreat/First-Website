@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un vrai bouton burger animé v2</title>
+</head> 
+    <style>
+        #burger {
+            width:300px;
+            height:300px;
+            position:relative;
+        }
+
+        #burger div {
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width: 80%;
+            height: 10%;
+            border-radius: 15px;
+            background-color: black;
+            transition: top 0.5s 0.5s , width 0.5s 0.s, transform 0.5s; /* le second nombre( ex 0.5s 0.25s) 
+                                                                        ↳ réprésente le delay avant lancement de la transition de l'attribut"*/
+        }
+        #burger div:first-child {
+            top:30%;
+        }
+        #burger div:last-child {
+            top:70%;
+        }
+
+        /* ***** ETAPE 2 : CROIX ***** */
+        /* input[type="checkbox"]:checked  + #burger permet d'indiquer qu'on cherche un boutton qui se trouverait juste apres un cas cochée
+           ↳ Grâce au combinateur '+' */
+        
+        #secret_cb:checked + label #burger div:last-child,
+        #secret_cb:checked + label #burger div:first-child {
+            top:50%;
+        }
+        #secret_cb:checked + label #burger div:first-child {
+            transform:translate(-50%,-50%) rotate(45deg);
+        }
+        #secret_cb:checked + label #burger div:last-child {
+            transform:translate(-50%,-50%) rotate(-45deg);
+        }
+        #secret_cb:checked + label #burger div:nth-child(2) {
+            width:0;
+        }
+        #secret_cb:checked + label #burger div {
+            transition: top 0.5s 0.25s, width 0.5s, transform 0.5s 0.75s, background-color 0.2s 0.8s;
+            background-color: red;
+        }
+    </style>
+<body>
+
+    <input id="secret_cb" type="checkbox"><label for="secret_cb">
+    <div id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+</div>
+    </body>
+</html>
