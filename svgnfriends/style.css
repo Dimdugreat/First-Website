@@ -1,7 +1,7 @@
 #petals, #sun, #ruban {
     stroke: #3a400f;
     stroke-width: 12px;
-    transition: fill 0.8s , stroke-width 1s, transform 1s;
+    transition: fill 0.8s , stroke-width 1s;
 }
 
 #logo {
@@ -20,9 +20,11 @@
     transform: translateX(4%);
 }
 #logo:hover #petals {
-    fill: #4431e9;
-    transform: rotate(160deg);
+    fill: rgb(32, 59, 216);
+    stroke-width: 5px;
+    transform: translateX(4%);
 }
+
 #petals {
     fill: #f2dfbb;
     transform-origin: center;
@@ -31,11 +33,47 @@
 }
 #sun {
     fill: #e74528;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform-origin: center;
     transform: rotateX(-10deg);
 }
 
 #ruban {
     fill: green;
     stroke-width: 10px;
+}
+
+/* Rotation macaron */
+
+@keyframes rotation_petals {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#petals {
+    animation: 4s linear infinite rotation_petals;
+}
+
+/* Rotation sun */
+
+@keyframes rotation_sun {
+    0% {
+        transform:rotate(360deg);
+    }
+    50% {
+        transform: scale(0.8) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1.35) rotate(0deg);   
+    }
+}
+
+#sun {
+    animation: 25s linear infinite rotation_sun;
 }
 
