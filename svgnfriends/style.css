@@ -1,0 +1,41 @@
+#petals, #sun, #ruban {
+    stroke: #3a400f;
+    stroke-width: 12px;
+    transition: fill 0.8s , stroke-width 1s, transform 1s;
+}
+
+#logo {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left:50%
+}
+#logo:hover #sun {
+    fill: rgb(241, 165, 0);
+    stroke-width: 5px;
+}
+#logo:hover #ruban {
+    fill: rgb(241, 165, 0);
+    stroke-width: 5px;
+    transform: translateX(4%);
+}
+#logo:hover #petals {
+    fill: #4431e9;
+    transform: rotate(160deg);
+}
+#petals {
+    fill: #f2dfbb;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+#sun {
+    fill: #e74528;
+    transform: rotateX(-10deg);
+}
+
+#ruban {
+    fill: green;
+    stroke-width: 10px;
+}
+
